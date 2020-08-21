@@ -10,7 +10,7 @@ Then the company plans to show pop-up add to 1% of its user to choose between th
 
 Lets assume that it had the rewrads matrix as :<br>
 
-![alt](Capture.png)
+![alt](Capture.PNG)
 
 Here row indicates the number of selected users and column indicates the number of strategies.<br>From the table we can see that user 0 was convinced by the strategy 4 and 8 and user 1 was convinced by strategy 7.
 Now using Thompson Sampling, we have to find the best strategy that will have maximum convesion rate.<br>
