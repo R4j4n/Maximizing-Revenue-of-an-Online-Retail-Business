@@ -1,19 +1,19 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 # Background 
-Suppose a online business that is planing to maximize its revenue.
-To maximize the revenue the company creates 10 subscription plan with different special deals. Then this company wants to find the paln which can attract more user or which of the plan has highest conversion rate.They want to figure it out as soon as possible, and by saving the maximum costs, which one has the highest
+Suppose an online business which is planing to maximize its revenue.
+To maximize the revenue the company creates 10 subscription plan with different special deals. Afterwards, company wants to find the plan which attracts more user or which of the plan has highest conversion rate.They want to figure it out as soon as possible, and by saving the maximum costs, which one has the highest
 conversion rate, because they know how finding and deploying that best strategy can significantly maximize
 the revenues.
 
 Then the company plans to show pop-up add to 1% of its user to choose between the 10 different subscription strategies.<br>
 
-Lets assume that it got the rewrads matrix as :<br>
+Lets assume that it had the rewrads matrix as :<br>
 
-<img src="Capture.png">
+![alt](Capture.png)
 
-Here row indicates the number of select user and column indicates the number of strategies.<br>From the table we can see that user 1 was convinced by the strategy 4 and 8 and user 1 was convinced by strategy 7.
-Now using Thompson Sampling we have to find the best strategy that will have maximum convesion rate.<br>
+Here row indicates the number of selected users and column indicates the number of strategies.<br>From the table we can see that user 0 was convinced by the strategy 4 and 8 and user 1 was convinced by strategy 7.
+Now using Thompson Sampling, we have to find the best strategy that will have maximum convesion rate.<br>
 
 For each round n, repeat, over 1000 rounds, the following three steps:<br>
 1. Step 1. For each strategy i, we take a random draw from the following distribution:
@@ -61,7 +61,7 @@ for i in range(N):
         if np.random.rand() <= conversion_rates[j]:
             X[i,j] = 1 
 ```
-So if we apply Thompson Sampling to this reward matrix , the sampling must selec strategy 10 as we already know it has the highest conversion rate. In the implementation part we are also comapring Thompson with Random Strategy.
+So if we apply Thompson Sampling to this reward matrix, the sampling must select strategy 10 as we already know it has the highest conversion rate. In the implementation part we are also comapring Thompson with Random Strategy.
 
  
 
